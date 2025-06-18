@@ -6,6 +6,11 @@ from huggingface_hub import InferenceClient
 client = InferenceClient()  #Inference is the process of using a trained model to make predictions on new data.
                             #InferenceClient is a Python client making HTTP calls to our APIs.
 
+# Full selection of features within InferenceClient class:
+class huggingface_hub.InferenceClient( model: typing.Optional[str] = Noneprovider: typing.Union[typing.Literal['black-forest-labs', 'cerebras', 'cohere', 'fal-ai', 'featherless-ai', 'fireworks-ai', 'groq', 'hf-inference', 'hyperbolic', 'nebius', 'novita', 'nscale', 'openai', 'replicate', 'sambanova', 'together'], typing.Literal['auto'], NoneType] = Nonetoken: typing.Optional[str] = Nonetimeout: typing.Optional[float] = Noneheaders: typing.Optional[typing.Dict[str, str]] = Nonecookies: typing.Optional[typing.Dict[str, str]] = Noneproxies: typing.Optional[typing.Any] = Nonebill_to: typing.Optional[str] = Nonebase_url: typing.Optional[str] = Noneapi_key: typing.Optional[str] = None )
+
+# The InferenceClient class has 10 paramaters as shown above.
+
 # Lines 9-12 are an example of using the inference client with another provider, api_key can be also be set.
 replicate_client = InferenceClient(
     provider="replicate",
